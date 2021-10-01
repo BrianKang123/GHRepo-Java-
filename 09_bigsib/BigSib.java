@@ -1,4 +1,4 @@
-Brian Kang
+Brian Kang and Vivian (Duckie)
 APCS
 HW07: Saving your Class
 2021-10-1
