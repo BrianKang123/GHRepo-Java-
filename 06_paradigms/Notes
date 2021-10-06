@@ -1,7 +1,7 @@
-Brian Kang
-APCS
-HW06:
-2021-09-21
+// Brian Kang
+// APCS
+// HW06: Paradigm Shift
+// 2021-09-21
 
 Similarities: All the codes have to run a command to show the same text of "Hello, world!"
 Differences: Python and Netlogo both use print, while racket uses display to represent the text.
