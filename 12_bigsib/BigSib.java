@@ -12,3 +12,5 @@ public class BigSib {
 
     public static void setHelloMsg(String newHelloMsg) {
         helloMsg = newHelloMsg;
+    }
+}
