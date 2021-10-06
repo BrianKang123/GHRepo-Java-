@@ -1,4 +1,4 @@
-// Brian Kang and Ryan Lau
+// TNPG: Orion (Ryan Lau and Brian Kang)
 // APCS
 // HW12 -- On Elder Individuality and the Elimination of Radio Fuzz
 // 2021-10-05
