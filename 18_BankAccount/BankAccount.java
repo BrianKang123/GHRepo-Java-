@@ -13,6 +13,7 @@ public class BankAccount {
   public String setFullName(String newFullName) {
     fullName = newFullName;
     System.out.println(fullName);
+    return fullName;
   }
 }
 
