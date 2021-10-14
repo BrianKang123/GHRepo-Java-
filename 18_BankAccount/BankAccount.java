@@ -6,8 +6,12 @@
 public class BankAccount {
   private String fullName = "";
   
-  public void setFullName(String fullname) {
-    fullName = fullname;
+  public static void main(String[] args) {
+  
+  }
+  
+  public void setFullName(String newFullName) {
+    fullName = newFullName;
   }
 }
 
