@@ -10,8 +10,9 @@ public class BankAccount {
     setFullName("test name")
   }
   
-  public void setFullName(String newFullName) {
+  public String setFullName(String newFullName) {
     fullName = newFullName;
+    System.out.println(fullName)
   }
 }
 
