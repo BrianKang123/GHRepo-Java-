@@ -7,12 +7,12 @@ public class BankAccount {
   private String fullName = "";
   
   public static void main(String[] args) {
-    setFullName("test name")
+    setFullName("test name");
   }
   
   public String setFullName(String newFullName) {
     fullName = newFullName;
-    System.out.println(fullName)
+    System.out.println(fullName);
   }
 }
 
