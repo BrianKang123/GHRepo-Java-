@@ -7,8 +7,8 @@ public class BankAccount {
   private String fullName = "";
   
   public static void main(String[] args) {
-    BankAccount 1 = new BankAccount();
-    1.setFullName("test name");
+    BankAccount acct1 = new BankAccount();
+    acct1.setFullName("test name");
   }
   
   
