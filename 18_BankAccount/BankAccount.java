@@ -3,7 +3,13 @@
 // HW18 -- CPA-One
 // 2021-10-14
 
-
+public class BankAccount {
+  private String fullName = "";
+  
+  public void setFullName(String fullname) {
+    fullName = fullname;
+  }
+}
 
 
 // Discoveries:
