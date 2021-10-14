@@ -6,11 +6,11 @@
 public class BankAccount {
   private String fullName = "";
   
-  public static void main(String[] args) {
+  public void main(String[] args) {
     setFullName("test name");
   }
   
-  public static String setFullName(String newFullName) {
+  public String setFullName(String newFullName) {
     fullName = newFullName;
     System.out.println(fullName);
     return fullName;
