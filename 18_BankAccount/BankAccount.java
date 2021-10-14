@@ -7,8 +7,10 @@ public class BankAccount {
   private String fullName = "";
   
   public static void main(String[] args) {
-    setFullName("test name");
+    BankAccount 1 = new BankAccount();
+    1.setFullName("test name");
   }
+  
   
   public String setFullName(String newFullName) {
     fullName = newFullName;
