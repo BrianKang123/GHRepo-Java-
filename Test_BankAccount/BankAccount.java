@@ -92,7 +92,7 @@ public class BankAccount {
     ba.setBalance(100);
     ba.deposit(99.99);
     ba.withdraw(9.99);
-    System.out.println(account.toString());
+    System.out.println(ba.toString());
   }
   //end main()
 
