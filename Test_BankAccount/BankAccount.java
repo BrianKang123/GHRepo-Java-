@@ -90,11 +90,10 @@ public class BankAccount {
     ba.setPin((short) 1234);
     ba.setAcctNum(123456789);
     ba.setBalance(100);
-
     ba.deposit(99.99);
     ba.withdraw(9.99);
-    
-    ba.toString();
-  }//end main()
+    System.out.println(account.toString());
+  }
+  //end main()
 
 }//end class BankAccount
