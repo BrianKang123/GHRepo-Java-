@@ -87,7 +87,7 @@ public class BankAccount {
     BankAccount ba = new BankAccount();
     ba.setName("clyde");
     ba.setPasswd("testpassword");
-    ba.setPin(1234);
+    ba.setPin((short) 1234);
     ba.setAcctNum(123456789);
     ba.setBalance(100);
 
