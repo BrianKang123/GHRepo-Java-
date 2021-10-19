@@ -5,7 +5,7 @@
    2021-10-18
    **/
 
-public class BankAccount {
+public class Teller{
 
   //instance variables
   private String name;
