@@ -118,8 +118,8 @@ private boolean authenticate( int accNum, String pass ) {
     ba.setPin(pin);
     ba.setAcctNum(123456789);
     System.out.println(ba.toString());
-    ba.setBalance(1000.00);
-    ba.deposit(200.00);
+    ba.setBalance(10000000.00);
+    ba.deposit(-200000.00);
     ba.withdraw(200.00);
     System.out.println("Authentication " + ba.authenticate(123456789, "PepeIsGod"));
 }//end main()
