@@ -96,7 +96,7 @@ private boolean authenticate( int accNum, String pass ) {
 
   //main method for testing
   public static void main( String[] args ) {
-    BankAccount ba = new BankAccount();
+    Teller ba = new Teller();
       System.out.println(ba.toString());
   //prints errors
     
