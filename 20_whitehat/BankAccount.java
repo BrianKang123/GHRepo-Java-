@@ -1,11 +1,11 @@
-/*
-Team Holister {Brianna, Pepe, Fang, Cat, Nicole, Duck}
-APCS
-HW19 -- Mo Money Mo Problems ...MORE AWESOME
-2021-10-19
-*/
+/**
+   Team NBJ, Jun Hong Wang, Brian K., Nada Hameed
+   APCS pd6
+   HW20 -- External Audit
+   2021-10-19
+**/
 
-public class BankAccount {
+public class BankAccount{
 
   //instance variables
   private String name;
@@ -86,48 +86,11 @@ public class BankAccount {
     return retStr;
   }
 
-private boolean authenticate( int accNum, String pass ) {
+public boolean authenticate( int accNum, String pass ) {
   if ((accNum == acctNum) && (pass == passwd)) {
     return (true);
   } else {
     return (false);
   }
 }
-
-  //main method for testing
-  public static void main( String[] args ) {
-    BankAccount ba = new BankAccount();
-      System.out.println(ba.toString());
-  //prints errors
-    short badPin = 0100;
-    ba.setName("badPepe");
-    ba.setPasswd("PepeIsBad");
-    ba.setPin(badPin);
-    ba.setAcctNum(000000001);
-    System.out.println(ba.toString());
-    ba.setBalance(1000.00);
-    ba.deposit (200.00);
-    ba.withdraw(10000.99);
-    System.out.println("Authentication " + ba.authenticate(123456789, "PepeIsGod"));
-//prints full info
-  short pin = 1234;
-    ba.setName("Pepe");
-    ba.setPasswd("PepeIsGod");
-    ba.setPin(pin);
-    ba.setAcctNum(123456789);
-    System.out.println(ba.toString());
-    ba.setBalance(1000.00);
-    ba.deposit(200.00);
-    ba.withdraw(7.99);
-    System.out.println("Authentication " + ba.authenticate(123456789, "PepeIsGod"));
-}//end main()
-
 }//end class BankAccount
-
-/*
-DISCOVERIES
-00: Different logical operators can be used in if statements to make them more efficient, such as && or ==.
-01: If statements require a return statments for all parts of the conditionals, such as else or if else. 
-QCC
-00: Is there another way to make the toString() method more efficient?
-*/
