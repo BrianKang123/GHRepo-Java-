@@ -5,6 +5,7 @@
    2021-10-21
    xtra: harmonic mean is the reciprocal of the
    arithmetic mean of the reciprocals
+   No TypeCasting
  **/
 
 public class Stats {
