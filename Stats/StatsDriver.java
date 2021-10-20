@@ -25,4 +25,4 @@ public class StatsDriver{
     System.out.println(Stats.geoMean(2.0,2.0));
   }
 }
- 
+  
