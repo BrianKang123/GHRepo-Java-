@@ -12,16 +12,16 @@ public class Slots {
 
   //instance variable to represent master copy for slot machine
   private static final String[] FRUITS = {
-    "lime", "lime", "lime", 
-    "lemon", "lemon", "lemon", 
+    "lime", "lime", "lime",
+    "lemon", "lemon", "lemon",
     "cherry", "cherry", "cherry",
     /*
       add extra fruits until your heart is content...
       Some suggestions:
-    "orange", "orange", "orange", 
-    "grapefruit", "grapefruit", "grapefruit", 
-    "tangerine", "tangerine", "tangerine", 
-    "ugli", "ugli", "ugli", 
+    "orange", "orange", "orange",
+    "grapefruit", "grapefruit", "grapefruit",
+    "tangerine", "tangerine", "tangerine",
+    "ugli", "ugli", "ugli",
     */
     "peach", "peach", "peach"
   };
@@ -37,21 +37,23 @@ public class Slots {
   public Slots()
   {
     //allocate memory for _fruits based on size of FRUITS:
-  
+    _fruits = new String[FRUITS.length];
 
     //copy elements of FRUITS into _fruits:
-
+    for(int i = 0 ; i < FRUITS.length ; i += 1){
+      _fruits[i] = FRUITS[i];
+    }
   }
 
 
   /*=====================================
     String toString() -- overrides inherited toString()
-    pre:  
+    pre:
     post: returns String of elements in slots 0 thru 2, separated by tabs
     =====================================*/
   public String toString()
   {
-    
+      return _fruits[0] + "\t" + _fruits[1] + "\t" + _fruits[2];
   }
 
 
@@ -62,7 +64,9 @@ public class Slots {
     =====================================*/
   private void swap( int i, int j )
   {
-
+    String iIndex = _fruits[i];
+    _fruits[i] = _fruits[j];
+    _fruits[j] = iIndex;
   }
 
 
@@ -76,8 +80,8 @@ public class Slots {
     // A simple approach to shuffling:
     // iterate through the array, swapping
     // the val at each index with a randomly chosen other index
-    for(  )
-      swap(  );
+    //!!for(  )
+    //!!  swap(  );
   }
 
 
@@ -100,15 +104,16 @@ public class Slots {
     boolean miniWin() -- checks for a winning combo
     pre:  _fruits is existing array
     post: returns true if first 3 slots represent winning combo,
-    or if first 3 slots mutually distinct, 
+    or if first 3 slots mutually distinct,
     false otherwise
     =====================================*/
   public boolean miniWin()
   {
-    boolean retBoo = ?
+    //!!boolean retBoo = ?
 
 
-    return retBoo;
+    //!!return retBoo;
+    return true;
   }
 
 
@@ -116,7 +121,7 @@ public class Slots {
   public static void main( String[] args ) {
     //usage: move bar below down 1 line at a time to test functionality...
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     Slots machine01 = new Slots();
     Slots machine02 = new Slots();
 
@@ -124,7 +129,7 @@ public class Slots {
     System.out.println();
     System.out.println( "Machine01 initial state:\t" + machine01 );
     System.out.println( "Machine02 initial state:\t" + machine02 );
-
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     System.out.println( "\nSpinning machine01...\n" );
 
     machine01.spinOnce();
