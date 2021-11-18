@@ -1,12 +1,16 @@
-/*****************************************************
- * Clyde "Thluffy" Sinclair
- * APCS pd00
- * HW38 -- Shmoney
- * 2021-11-18
- *
- * class Slots
- * skeleton
- *****************************************************/
+// TNPG: All Brians (Brian Kang, Brian Wang, Ryan Lau)
+// APCS
+// HW38 -- Spin Class
+// 2021-11-17
+// time spent: 0.4 hrs
+
+/*
+DISCOVERIES
+    0. To generate a random int in a range, we can use this line of code:
+        int randInt = (int) (Math.random() * (MAX - MIN)) + MIN;
+UNRESOLVED QUESTIONS
+    0. Is there a better way to copy an array into another?
+*/
 
 public class Slots {
 
@@ -15,15 +19,14 @@ public class Slots {
     "lime", "lime", "lime",
     "lemon", "lemon", "lemon",
     "cherry", "cherry", "cherry",
-    /*
-      add extra fruits until your heart is content...
-      Some suggestions:
     "orange", "orange", "orange",
-    "grapefruit", "grapefruit", "grapefruit",
-    "tangerine", "tangerine", "tangerine",
     "ugli", "ugli", "ugli",
-    */
-    "peach", "peach", "peach"
+    "peach", "peach", "peach",
+    "banana", "banana", "banana",
+    "plum", "plum", "plum",
+    "pear", "pear", "pear",
+    "apple", "apple", "apple",
+    "Brian", "Brian", "Brian"
   };
 
   private String[] _fruits; //to be init'd by each instance
@@ -80,8 +83,10 @@ public class Slots {
     // A simple approach to shuffling:
     // iterate through the array, swapping
     // the val at each index with a randomly chosen other index
-    //!!for(  )
-    //!!  swap(  );
+    for(int i = 0; i < _fruits.length; i++) {
+        int randIndex = (int) (Math.random() * _fruits.length);
+        swap(i, randIndex);
+    }
   }
 
 
@@ -93,10 +98,7 @@ public class Slots {
     =====================================*/
   public boolean jackpot()
   {
-    boolean retBoo = false;
-
-
-    return retBoo;
+    return _fruits[0].equals(_fruits[1]) && _fruits[1].equals(_fruits[2]);
   }
 
 
@@ -109,11 +111,11 @@ public class Slots {
     =====================================*/
   public boolean miniWin()
   {
-    //!!boolean retBoo = ?
+    if (jackpot()) {
+        return true;
+    }
 
-
-    //!!return retBoo;
-    return true;
+    return !(_fruits[0].equals(_fruits[1])) || !(_fruits[1].equals(_fruits[2]) || !(_fruits[0].equals(_fruits[2])));
   }
 
 
@@ -121,15 +123,13 @@ public class Slots {
   public static void main( String[] args ) {
     //usage: move bar below down 1 line at a time to test functionality...
 
-
     Slots machine01 = new Slots();
     Slots machine02 = new Slots();
 
     //test to verify slot machines function indepently
-    System.out.println();
     System.out.println( "Machine01 initial state:\t" + machine01 );
     System.out.println( "Machine02 initial state:\t" + machine02 );
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     System.out.println( "\nSpinning machine01...\n" );
 
     machine01.spinOnce();
@@ -138,7 +138,6 @@ public class Slots {
     System.out.println( "Machine01 state:\t" + machine01 );
     System.out.println( "Machine02 state:\t" + machine02 );
     System.out.println();
-
 
     //test gamble-until-you-win mechanism
 
@@ -156,11 +155,8 @@ public class Slots {
     System.out.println( "Your spin..." + "\t" + machine01 );
     System.out.println( "WIN\n" );
 
-
-
     System.out.println( "Preparing to spin until...jackpot! . . ." );
     System.out.println( "------------------------------------" );
-
     //if you haven't won, spin again until you win!
     while( machine01.jackpot() == false ) {
       System.out.println( "Your spin..." + "\t" + machine01 );
@@ -171,7 +167,6 @@ public class Slots {
     System.out.println( "====================================" );
     System.out.println( "Your spin..." + "\t" + machine01 );
     System.out.println( "JACKPOT!\n" );
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main
 
 }//end class Slots
