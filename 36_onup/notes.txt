@@ -1,0 +1,43 @@
+Brian Kang
+APCS
+HW36 -- All Quacked Up?
+2021-11-18
+
+Compile-time errors: Something is wrong with the syntax of the program
+Run-time errors: Something is wrong while the program is running
+Logic errors: Causing the program to do the wrong thing (Ex: The expression is in the wrong order.)
+
+D.1 Compile-Time Errors
+The key to good coding is to start with a working program and add small amounts of code over time so you know where the error lies.
+1. If the compiler is spewing error messages doesn't mean that there are a lot of errors in your program, but it means that its trying to restabilize after the first error, altering the entire code.
+2. If the weird compiler message won't go away then read the message carefully as it will tell you where the probelm occured and give you a guideline on how to resolve the error. 
+Note: Make sure the program is indented properly and take deep breaths to make sure you don't miss the problem.
+If you want to look for Syntax errors:
+    1. Check the parentheses and brackets are placed correctly
+    2. Check capitalization, semicolons, strings
+    3. Make sure quotation marks or any punctuation is assignmned prepoerly
+    4. For each assignment statement, make sure that the types are the same
+    5. For each method invocation, check the arguments in the correct order.
+    6. When invoking an instance method, then make sure you are invoking it with the right type. 
+3. If the program can't compile no matter what you do, it might be because the compiler and the thinker are not looking at the same code and perceiving it in the same manner.
+Make sure that the compiler is looking at the edited changes and looking at the correctly compiled file. 
+Debugging by bisection: Divide your code into different parts and see which part of the code that the error lies and move from there. 
+4. The compiler isn't always right!
+
+D.2 Run-Time Errors
+1. The program hangs and just stops because it is caught in an infinite loop or infinite recursion.
+Make sure there is a print statement to output the result of your infinite series.
+Add messages to methods to ensure the proper "flow of execution".
+2. When the program is ran, you get an exception and Java will display the exception to you. 
+NullPointerException: Values are null until you assign something to it.
+ArrayIndexOutOfBoundsException: The Index being used is either negative or within the reach of the array length.
+Other Exceptions: StackOverflowError, FileNotFoundException, ArithmeticException
+3. If you have too many print statements than either simplify the output or simplify the program. 
+
+D.3 Logic Errors
+1. If the program doesn't work than figure out what you want the program to do and what each part of the program does.
+2. IF your expressions are complex but readable than  try to break the complex expression down into different parts or assignments to debug easier.
+3. If the method doesn't return what you expect than use temporary variables to see how the code transitions to the final output. 
+4. If you are upset about the errors of your code than take a walk and be calm.
+5. If you really need help, talk to your duckie about your problems and it will help you discover the solution.
+6. If you found the bug than it should be easy to debug the code from there. 
