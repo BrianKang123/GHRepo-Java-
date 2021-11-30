@@ -7,10 +7,10 @@
 /*
 DISCOVERIES
     0. variables, methods, classes cannot start with a number [0 - 9]
-UNRESOLVED QUESTIONS
-    0.
-*/
 
+UNRESOLVED QUESTIONS
+    0. what is the best way to return the result of a linsearch on a 2d array?
+*/
 
 public class TwoDimArray {
     public static String toString(int[] arr) {
