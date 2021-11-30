@@ -13,7 +13,7 @@ UNRESOLVED QUESTIONS
 
 
 public class TwoDimArray {
-    public static String arrayToString(int[] arr) {
+    public static String toString(int[] arr) {
         String res = "[";
         for (int element : arr) {
             res = res + element + ", ";
@@ -24,10 +24,10 @@ public class TwoDimArray {
         return res;
     }
 
-    public static String twoDimArrayToString(int[][] arr) {
+    public static String toString(int[][] arr) {
         String res = "[\n";
         for (int[] subarr : arr) {
-            res = res + "    " + arrayToString(subarr) + ",\n";
+            res = res + "    " + toString(subarr) + ",\n";
         }
         res = res.substring(0, res.length() - 2);
         res += "\n]";
@@ -35,14 +35,14 @@ public class TwoDimArray {
         return res;
     }
 
-    public static void fillTwoDimArray(int[][] arr) {
-        fillTwoDimArray(arr, 0, 10);
+    public static void fill(int[][] arr) {
+        fill(arr, 0, 10);
     }
 
     /**
      * fills array with random ints from [min, max)
      */
-    public static void fillTwoDimArray(int[][] arr, int min, int max) {
+    public static void fill(int[][] arr, int min, int max) {
         for (int j = 0; j < arr.length; j++) {
             for (int k = 0; k < arr[j].length; k++) {
                 int randInt = (int) (Math.random() * (max - min)) + min;
@@ -51,7 +51,7 @@ public class TwoDimArray {
         }
     }
 
-    public static int freqTwoDimArray(int[][] arr, int target) {
+    public static int freq(int[][] arr, int target) {
         int counter = 0;
         for (int[] subarr : arr) {
             for (int ele : subarr) {
@@ -63,7 +63,7 @@ public class TwoDimArray {
         return counter;
     }
 
-    public static int[] linSearchTwoDimArray(int[][] arr, int target) {
+    public static int[] linSearch(int[][] arr, int target) {
         for (int j = 0; j < arr.length; j++) {
             for (int k = 0; k < arr[j].length; k++) {
                 if (arr[j][k] == target) {
@@ -76,15 +76,15 @@ public class TwoDimArray {
 
     public static void main(String[] args) {
         int[][] a = new int[5][5];
-        System.out.println(twoDimArrayToString(a));
+        System.out.println(toString(a));
         System.out.println();
-        fillTwoDimArray(a, 0, 100);
-        System.out.println(twoDimArrayToString(a));
+        fill(a, 0, 100);
+        System.out.println(toString(a));
         System.out.println();
-        fillTwoDimArray(a);
-        System.out.println(twoDimArrayToString(a));
+        fill(a);
+        System.out.println(toString(a));
         System.out.println();
-        System.out.println("5 appears in the 2D array " + freqTwoDimArray(a, 5) + " time(s)");
-        System.out.println("5 appears in the 2D array first at " + arrayToString(linSearchTwoDimArray(a, 5)));
+        System.out.println("5 appears in the 2D array " + freq(a, 5) + " time(s)");
+        System.out.println("5 appears in the 2D array first at " + toString(linSearch(a, 5)));
     }
 }
