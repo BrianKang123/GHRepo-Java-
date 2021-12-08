@@ -1,19 +1,16 @@
-// Clyde "Thluffy" Sinclair
-// APCS1 pd0
-// HW44 -- expanding SuperArray functionality, encapsulation
-// 2021-12-08w
+// TNPG: All Brians (Brian Kang, Brian Wang, Ryan Lau)
+// APCS
+// HW44 -- Array of Grade 316
+// 2021-12-07
+// time spent: 0.5 hrs
 
-/***************************
- * class SuperArray version 2.0
- * (SKELETON)
- * Wrapper class for array. Facilitates
- * resizing
- * expansion
- * read/write capability on elements
- * adding an element to end of array
- * adding an element at specified index
- * removing an element at specified index
- ***************************/
+/*
+DISCOVERIES
+    0.
+UNRESOLVED QUESTIONS
+    0. Should the provided main method not change _size? Without changing it, all the test arrays will print nothing.
+    1. Can set set things out of _size bounds? If so, do we increase size? Do we hold left justice?
+*/
 
 public class SuperArray
 {
@@ -98,8 +95,10 @@ public class SuperArray
   //shifts elements left to fill in newly-empted slot
   public void remove( int index )
   {
-    _size -=
-    for(int i = index ; index < _size ; )
+    _size -= 1;
+    for(int i = index ; i < _size ; i += 1){
+      _data[i] = _data[i + 1];
+    }
   }
 
   public void remove()
@@ -121,11 +120,13 @@ public class SuperArray
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
+
       SuperArray curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
 
+      //This is required due to the unconventional method of adding numbers to curtis.
+      curtis._size = 10;
       for( int i = 0; i < curtis._data.length; i++ ) {
       curtis.set( i, i * 2 );
       }
@@ -170,6 +171,7 @@ public class SuperArray
       mayfield.add(1,77);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
+      /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
 
