@@ -45,7 +45,7 @@ public class LinSearch
   //minimal -- augment as necessary
   public static void main ( String[] args )
   {
-    /*----------------------------------------------------
+
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     System.out.println("\nNow testing linSearch on int array...");
@@ -81,7 +81,7 @@ public class LinSearch
     //search for "lychee" in array
     System.out.println( linSearch(sArr,"lychee") );
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+    /*----------------------------------------------------
       ----------------------------------------------------*/
 
   }//end main()
