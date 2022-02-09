@@ -15,32 +15,20 @@ public class MergeSort
    ******************************************************/
   private static int[] merge( int[] a, int[] b )
   {
-    int[] out = new int[a.length + b.length];
-    int apple = 0;
-    int banana = 0;
-    while ((a.length > apple) && (b.length > banana)) {
-      if (a[apple] > b[banana]) {
-        out[apple + banana] = b[banana];
-        banana++;
+    int[] a0 = a;
+    int[] b0 = b;
+    int[] output = new int[];
+    while (a0.length > 0 && b0.length > 0) {
+      if (a0[0] < b0[0]) {
+        output.add(a0[0]);
+        a0.remove(0);
       }
-      else {
-        out[apple + banana] = a[apple];
-        apple++;
-      }
-    }
-    if (a.length == 0) {
-      while (b.length > banana) {
-        out[apple + banana] = b[banana];
-        banana++;
+      else (b0[0] <= a0[0]) {
+        output.add(b0[0]);
+        b0.remove(0);
       }
     }
-    else {
-      while (a.length > apple) {
-        out[apple + banana] = a[apple]
-        apple++;
-      }
-    }
-    return out;
+
   }//end merge()
 
 
@@ -51,15 +39,7 @@ public class MergeSort
    ******************************************************/
   public static int[] sort( int[] arr )
   {
-    int count = arr.length/2;
-    int[] arr2 = new int[count];
-    int[] arr3 = new int[arr.length - count];
-    for (int i = 0; i < count; i++) {
-      arr2[i] = arr[i];
-    }
-    for (int i = count; i < arr.length; i ++) {
-      arr3 = arr[i];
-    }
+
   }//end sort()
 
 
