@@ -10,7 +10,14 @@ Activity 1
 2. 
 Method Call           | Return Value
 =====================================
-sentimentVal("hello") | 0.75
+sentimentVal("goods") | 0.21
 sentimentVal("therapy")   | -0.37
 sentimentVal("brian")  | 0.31
 sentimentVal("money")  | 0.39
+
+3a. double num sentimentVal("warm"); 
+This will complie because it has a variable type and the argument with a single string.
+3b. String worn sentinentVal(0.5);
+This will not compile because the value is not a word or in other words it returns a double.
+3c. double x sentimentVal("good", "bad");
+This will not complie because the code had two unique string parameters, while sentiment Val requires one.   
