@@ -8,3 +8,9 @@ Activity 1
 1c. The method returns a double type.
 
 2. 
+Method Call           | Return Value
+=====================================
+sentimentVal("hello") | 0.75
+sentimentVal("therapy")   | -0.37
+sentimentVal("brian")  | 0.31
+sentimentVal("money")  | 0.39
