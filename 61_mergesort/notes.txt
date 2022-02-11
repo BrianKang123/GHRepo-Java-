@@ -1,0 +1,23 @@
+
+Team BAKK: Brian Kang, Ariella Katz, Vivian, Tom
+APCS
+HW61 - Instructions so Simple...
+2022-02-08
+time spent: 0.5 hrs
+
+DISCO:
+0. This algo utilizes recursion! The base case is a deck
+   height of 1.
+
+QCC:
+0. Could we optimize this by checking whether the deck
+   has 2 cards, and if so, just merging them instead of
+   dividing by 2 again?
+
+THINKER FIRMWARE:
+0. Is it sorted? (Is the deck height 1?)
+1. If yes: You're done!
+2. If no:
+  a. Divide the deck into two.
+  b. Have 2 available thinkeren sort each half.
+  c. Merge the 2 now-sorted halves.
