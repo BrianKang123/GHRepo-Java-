@@ -1,0 +1,10 @@
+Brian Kang
+APCS
+2022-02-11
+
+Activity 1
+1a. The method signature is (public static double sentimentVal(String))
+1b. This method does require a parameter, which is the string parameter. If you pass a different type of parameter, it will most probably return an error.
+1c. The method returns a double type.
+
+2. 
