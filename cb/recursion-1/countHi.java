@@ -16,6 +16,9 @@ public class countHi{
     System.out.println(countHi("xhixhix") + " → 2");
     System.out.println(countHi("hi") + " → 1");
   }
+  
+  //Given a string, compute recursively (no loops) the number of times lowercase "hi" appears in the string.
+  
   //Not tree recursion
   //Identical to countX in nature, except for the search zone being 2 at a time
   //^^^^
