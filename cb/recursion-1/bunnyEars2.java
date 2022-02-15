@@ -13,6 +13,13 @@ public int bunnyEars2(int bunnies) {
   }
 }
 
+  public static void main(String[] args) {
+    System.out.print(bunnyEars2(0) + " → \"0");
+    System.out.print(bunnyEars2(1) + " → \"2");
+    System.out.print(bunnyEars2(2) + " → \"5");
+
+  }
+}
 
 //Not tree recursion
 //Only one line of calls and returns
