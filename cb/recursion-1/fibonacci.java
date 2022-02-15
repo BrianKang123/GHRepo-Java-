@@ -11,9 +11,9 @@ public int fibonacci(int n) {
 }
 
   public static void main(String[] args){
-    System.out.println(countX("0") + " → 0");
-    System.out.println(countX("1") + " → 1");
-    System.out.println(countX("2") + " → 1");
+    System.out.println(fibonacci(0) + " → 0");
+    System.out.println(fibonacci(1) + " → 1");
+    System.out.println(fibonacci(2) + " → 1");
   }
 
 //
