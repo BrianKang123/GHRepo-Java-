@@ -1,4 +1,5 @@
-public int bunnyEars2(int bunnies) {
+public class bunnyEars2{
+ public int bunnyEars2(int bunnies) {
   if(bunnies > 0){
     if(bunnies % 2 == 0){
       return 3 + bunnyEars2(bunnies-1);
