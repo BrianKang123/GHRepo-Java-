@@ -1,10 +1,10 @@
-// Clyde Sinclair
-// APCS pd0
-// HW69 -- maze solving (blind, depth-first)
-// 2022-03-03r
-// time spent:  hrs
-
 /***
+ *
+ * Team Bob -- Jacob Kirmayer, Brian Kang, Michael Kamela
+ * APCS pd6
+ * HW70
+ * 2022-03-04f
+ * time spent: 0.3 hrs
  * SKEELTON for
  * class MazeSolver
  * Implements a blind depth-first exit-finding algorithm.
@@ -15,12 +15,13 @@
  * (mazefile is ASCII representation of a maze, using symbols below)
  *
  * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
- *
+ *  1. Go down path until dead end or finish line found
+ *  2. Check another path if that doesnt work
+ *  3. Rinse and repeat
  * DISCO
- * 
+ *  The @ signs were just used to show the actual path taken by the character
  * QCC
- * 
+ *  How much faster can we solve a problem of this type?
  ***/
 
 //enable file I/O
@@ -99,7 +100,7 @@ class MazeSolver
     int i, j;
     for( i=0; i<h; i++ ) {
       for( j=0; j<w; j++ )
-        retStr = retStr + _maze[j][i];
+        retStr = retStr + Character.toString(_maze[j][i]);
       retStr = retStr + "\n";
     }
     return retStr;
@@ -130,31 +131,33 @@ class MazeSolver
     delay( FRAME_DELAY ); //slow it down enough to be followable
 
     //primary base case
-    if ( _maze[x][y] == "$" ) {
-	System.exit(0);
+    if ( _maze[x][y] == '$' ) {
+	  System.exit(0);
     }
     //other base cases
-    else if ( _maze[x][y] !="#") {
+    else if ( _maze[x][y] !='#') {
       return;
     }
     //otherwise, recursively solve maze from next pos over,
     //after marking current location
     else {
-	_maze[x][y] = "@"; 
-      System.out.println( this ); //refresh screen
+	_maze[x][y] = '@';
+    System.out.println( this ); //refresh screen
+	delay(50);
 	solve(x+1,y); 
 	solve(x-1,y);
 	solve(x,y+1);
-	solve(x,y-1):
-		
+	solve(x,y-1);
+      _maze[x][y] = '.';
 
       System.out.println( this ); //refresh screen
+	delay(50);
     }
   }
 
   //accessor method to help with randomized drop-in location
   public boolean onPath( int x, int y) {
-      
+      return _maze[x][y] == '#';
   }
 
 }//end class MazeSolver
