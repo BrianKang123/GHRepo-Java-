@@ -1,8 +1,8 @@
 // JAB (Jeffery Tang, Andrew Piatetsky, Brian Kang)
 // APCS pd6
-// HW78: Double Up
-// 2022-03-016
-// time spent:  1 hour
+// HW79: A YouTube Host Are You
+// 2022-03-17
+// time spent:  30mins
 
 /*
 DISCO:
