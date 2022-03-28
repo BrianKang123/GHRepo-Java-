@@ -1,0 +1,14 @@
+JAB (Jeffery Tang, Andrew Piatetsky, Brian Kang)
+APCS pd6
+HW82: Roll Your Own Iterator
+2022-03-27
+time spent:  45minutes
+
+
+Having a nested class makes stuff pretty easy, just good for organizing. Still don't understand why they can't be the same class in general,
+(for this case I understand why, because need to have something independent from the actual class to have a wide range of things implement it)
+
+Generally not too difficult, but only error that I got stuck on was the one where the method has to return an object of type T, and didn't 
+know how to do that without returning something random 
+ - you cant initialize a type T
+- and you can't just return it, so had to use something else random like getCargo of dummy node
