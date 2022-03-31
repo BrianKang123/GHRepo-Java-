@@ -1,32 +1,43 @@
 import java.util.ArrayList;
 
 public class ALStack<PANCAKE> implements Stack<PANCAKE>{
-  private ArrayList<PANCAKE> _stack = new ArrayList<PANCAKE> ();
+
+
+  private ArrayList<PANCAKE> _stack; 
   private int _stackSize;
 
-  // public ALStack() {
-  //
-  // }
+  public ALStack() {
+    _stack = new ArrayList<PANCAKE>();
+    _stackSize = 0;
+  }
+
+
   public boolean isEmpty() {
-    if (_stack.size() == 0) {
+    if (_stackSize <= 0) {
       return true;
     }
     return false;
   }
 
+
   public PANCAKE peekTop() {
-    return _stack.get(_stack.size() -1);
+    if (isEmpty()) return null;
+
+    return _stack.get(_stackSize-1);
   }
 
+
   public PANCAKE pop() {
-    PANCAKE retVal;
-    if (isEmpty()) {
-      return null;
-    }
-    retVal = _stack.get(_stack.size()-1);
-    return retVal;
+
+    if (isEmpty()) return null;
+    _stackSize -= 1;
+
+    return _stack.remove(_stackSize);
   }
+
+
   public void push(PANCAKE x) {
-    _stack.set(_stack.size(), x);
+    _stack.add(x);
+    _stackSize += 1;
   }
 }
