@@ -1,14 +1,14 @@
-
 JAB (Jeffery Tang, Andrew Piatetsky, Brian Kang)
 APCS pd6
-HW90: Swabbing the Deque
-2022-04-12
+HW90: Deque the Halls
+2022-04-13
 time spent:  20min
-
-
-
 QCC:
-What are Queue's and Deque's used for, stacks are used to control the flow of operations in programming languages for example. 
+What are Queue's and Deque's used for, stacks are used to control the flow of operations in programming languages for example,
+what are Queue's useful for?
+
+What other methods are we missing?
+  - like remove or descendingIterator?
 
 
 
@@ -25,3 +25,6 @@ In the middle of development decided to just extend our old Queue interface sinc
 change the names of some of the methods in our LLDeque class and remove some stuff from Deque interface
 
 Also removed size because don't use it anyways, LinkedList takes care of it for us
+
+
+In the development of v2, we decided to combine Queue and Deque to make it easier for us to keep track of method names and redundencies
