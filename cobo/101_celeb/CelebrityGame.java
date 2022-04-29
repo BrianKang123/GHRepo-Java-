@@ -20,7 +20,7 @@ public class CelebrityGame
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
-	 private Arraylist<Celebrity> celebList = new ArrayList<Celebrity>();
+	 private ArrayList<Celebrity> celebList = new ArrayList<Celebrity>();
 
 	/**
 	 * Builds the game and starts the GUI
