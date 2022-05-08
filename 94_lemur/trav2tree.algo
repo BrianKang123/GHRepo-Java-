@@ -8,7 +8,7 @@ time spent: 1 hrs
 DISCO
 ------------------------------------------------
 * Unique means that one path is the only possible way from start to finish.
-* Inorder traversals are different from the post order traversals in the order presented. 
+* Inorder traversals are different from the post order traversals in the order presented.
 ================================================
 
 
@@ -24,19 +24,19 @@ Q: For a given binary tree, how many unique pre-order traversals are there?
 A: In a binary tree, there is only 1 pre-order traversals from left to right.
 
 Q: For a given binary tree, how many unique in-order traversals are there?
-A: In a binary tree, there is only 1 in-order traversal from the bottom of the tree to the top. 
+A: In a binary tree, there is only 1 in-order traversal from the bottom of the tree to the top.
 
 Q: For a given binary tree, how many unique post-order traversals are there?
 A: In a binary tree, there is only 1 unique post order travers
 
 Q: For a given traversal, how many unique trees could have produced it?
-A: In a traversal, depending on the other traversal with it, we can presume the number of possible trees. 
+A: In a traversal, depending on the other traversal with it, we can presume the number of possible trees.
 
 Q: Given a pre-order traversal, what can you infer about its tree?
-A: For a pre-order traversal, we can infer that the first letter in the sequence is the root. 
+A: For a pre-order traversal, we can infer that the first letter in the sequence is the root.
 
 Q: Given a post-order traversal, what can you infer about its tree?
-A: For a post-order traversal, we can infer that the last letter in the sequence is the root. 
+A: For a post-order traversal, we can infer that the last letter in the sequence is the root.
 
 Q: What does "1-to-1" mean?
 A: 1 to 1 means that the height increases as the length increases in a 1 to 1 ratio.
@@ -53,22 +53,23 @@ givens: Pre-Order Traversal
         Post-Order Traversal
 procedure: 1. Check if the first of the preorder is the same as the last of the post order. If so, place it as the root.
            2. Notice the groupings in the post order and adjust the preorder traversal accordingly. If the words separate in the post order,
-           move the letters to the right branch, instead of the left. 
-           3. Once, new letters are provided in the post order, start at the right subtree and repeat step 2. 
-           
+           move the letters to the right branch, instead of the left.
+           3. Once, new letters are provided in the post order, start at the right subtree and repeat step 2.
+
  ALGO for Pre with In Order
 ------------------------------------------------
 givens: Pre-Order Traversal
         In-Order Traversal
-procedure: 1. The first branch of preorder and in order will be the exact opposites.
-           2. The next branch of preorder will relate to the later portion of the in order, assuming that it goes from left to right. 
-   
+procedure: 1. Identify the root, the first element in pre-order is always the root. All elements left of the root in in-order are in the left, and right on the right.
+           2. If the next pre-order element is left of the current element in in-order, it is the left child of the current element.
+           3. If the next pre-order element is right of the current element in in-order, it is the right child of the element it is immediately right of.
+           3. Repeat.
+
  ALGO for Pre with Post Order
 ------------------------------------------------
 givens: Post-Order Traversal
         In-Order Traversal
-procedure: 1. The first branch of the post order and the last branch of the in order will be the exact same, except for some small differences.
-           2. The next branch will relate to the branch in the in order traversal as you move through the sequence. 
+procedure: Bascically pre-order and in-order except the root is the last element, you go through the post-order list backwards, and the left/right of the root is flipped. 
 
 ================================================
 (replicate the algo section above as many times as necessary for distinct algos)
