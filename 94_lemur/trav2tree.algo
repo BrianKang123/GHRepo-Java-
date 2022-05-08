@@ -60,13 +60,15 @@ procedure: 1. Check if the first of the preorder is the same as the last of the 
 ------------------------------------------------
 givens: Pre-Order Traversal
         In-Order Traversal
-procedure: 
+procedure: 1. The first branch of preorder and in order will be the exact opposites.
+           2. The next branch of preorder will relate to the later portion of the in order, assuming that it goes from left to right. 
    
  ALGO for Pre with Post Order
 ------------------------------------------------
 givens: Post-Order Traversal
         In-Order Traversal
-procedure: 
+procedure: 1. The first branch of the post order and the last branch of the in order will be the exact same, except for some small differences.
+           2. The next branch will relate to the branch in the in order traversal as you move through the sequence. 
 
 ================================================
 (replicate the algo section above as many times as necessary for distinct algos)
