@@ -1,3 +1,11 @@
+/*
+FRED (Brian Wang, Brian Kang, Ethan Lam)
+APCS
+HW95 BST
+2022--05--09
+time spent: .5 hrs
+*/
+
 /**
  * class TreeNode
  * SKELETON
@@ -20,7 +28,7 @@ public class TreeNode
    */
   TreeNode( int initValue )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    _cargo = initValue;
   }
 
 
@@ -30,7 +38,9 @@ public class TreeNode
    */
   TreeNode( int initValue, TreeNode initLeft, TreeNode initRight )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    _cargo = initValue;
+    _lt = initLeft;
+    _rt = initRight;
   }
 
 
@@ -39,7 +49,7 @@ public class TreeNode
    */
   TreeNode getLeft()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    return _lt;
   }
 
 
@@ -48,7 +58,7 @@ public class TreeNode
    */
   TreeNode getRight()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    return _rt;
   }
 
 
@@ -57,7 +67,7 @@ public class TreeNode
    */
   int getValue()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    return _cargo;
   }
 
 
@@ -66,7 +76,7 @@ public class TreeNode
    */
   void setLeft( TreeNode theNewLeft )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    _lt = theNewLeft;
   }
 
 
@@ -75,16 +85,16 @@ public class TreeNode
    */
   void setRight( TreeNode theNewRight )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    _rt = theNewRight;
   }
 
 
   /**
    * Sets the value of this tree node.
    */
-  void setValue( int theNewValue ) 
+  void setValue( int theNewValue )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    _cargo = theNewValue;
   }
 
 }//end class
