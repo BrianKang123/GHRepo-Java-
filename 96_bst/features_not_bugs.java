@@ -1,4 +1,4 @@
-public class features_not_bugs{
+public class features_not_bugs extends BST{
     /*****************************************************
      * TreeNode search(int)
      * returns pointer to node containing target,
@@ -38,13 +38,13 @@ public class features_not_bugs{
 		return 0;
 		//height may be 1 off, test if it should be 0 or -1
 	}
-    	else if(height(curNode.getLeft()) > height(curNode.getRight()){
-    		return height(curNode.getLeft() + 1;
+    	else if(height(curNode.getLeft()) > height(curNode.getRight())){
+    		return height(curNode.getLeft());
     	}
     	else{
-    		return height(curNode.getRight() + 1;
+    		return height(curNode.getRight());
     	}
-    	
+
     }
 
 
@@ -52,10 +52,12 @@ public class features_not_bugs{
      * int numLeaves()
      * returns number of leaves in tree
      *****************************************************/
+
     public int numLeaves()
     {
     	return numLeaves(_root, 0);
     }
+
     public int numLeaves(TreeNode curNode, int curLeaves){
     	if(curNode.getLeft() != null){
     		curLeaves = numLeaves(curNode.getLeft(), curLeaves);
@@ -63,7 +65,7 @@ public class features_not_bugs{
     	if(curNode.getRight() != null){
     		curLeaves = numLeaves(curNode.getRight(), curLeaves);
     	}
-    	
-    
+        return numLeaves(curNode, curLeaves + 1);
     }
+
 }
