@@ -4,7 +4,7 @@
  * Implements a min heap using an ArrayList as underlying container
  */
 
-//import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class ALHeap
 {
@@ -17,6 +17,7 @@ public class ALHeap
    */
   public ALHeap()
   {
+  	_heap = new ArrayList();
   }
 
 
@@ -29,7 +30,8 @@ public class ALHeap
    */
   public String toString()
   {
-  }//O(?)
+  	return _heap.toString();
+  }//O(n)
 
 
   /**
@@ -38,7 +40,8 @@ public class ALHeap
    */
   public boolean isEmpty()
   {
-  }//O(?)
+  	return _heap.isEmpty();
+  }//O(1)
 
 
   /**
@@ -48,19 +51,26 @@ public class ALHeap
    */
   public Integer peekMin()
   {
-  }//O(?)
+  	return _heap.get(0);
+  }//O(1)
 
 
   /**
    * add(Integer)
    * Inserts an element in the heap
    * Postcondition: Tree exhibits heap property.
-   * ALGO:
+   * ALGO: 1. Insert as next child. 2. While current node is greater than parent node, swap.  
    * <your clear && concise procedure here>
    */
   public void add( Integer addVal )
   {
-  }//O(?)
+  	int curInd = _heap.size(); 
+  	int parInd = 
+  	_heap.add(addVal);
+  	while (addVal >= _heap.get(0){
+  		_heap.size -1
+  	}
+  }//O(log n)
 
 
   /**
