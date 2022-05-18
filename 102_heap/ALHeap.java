@@ -1,3 +1,21 @@
+/*
+Fred (Brian Wang, Brian Kang, Ethan lam)
+APCS
+2022--05--17
+HW102 heaping pile of
+time spent: idk hrs
+
+disco:
+What is a heap
+How to do heap in AList
+
+qcc:
+mental sanity
+
+
+*/
+
+
 /**
  * class ALHeap
  * SKELETON
@@ -59,30 +77,44 @@ public class ALHeap
    * add(Integer)
    * Inserts an element in the heap
    * Postcondition: Tree exhibits heap property.
-   * ALGO: 1. Insert as next child. 2. While current node is greater than parent node, swap.  
+   * ALGO: 1. Insert as next child. 2. While current node is greater than parent node, swap.
    * <your clear && concise procedure here>
    */
-  public void add( Integer addVal )
-  {
-  	int curInd = _heap.size(); 
-  	int parInd = 
-  	_heap.add(addVal);
-  	while (addVal >= _heap.get(0){
-  		_heap.size -1
-  	}
-  }//O(log n)
+   public void add( Integer addVal ){
+     _heap.add(addVal);
+     if(_heap.size() > 1){
+       int curInd = _heap.size() - 1;
+       int parInd = (curInd-1)/2 ;
+       while(_heap.get(curInd)<_heap.get(parInd)){
+         swap(curInd, parInd);
+         curInd = parInd;
+         parInd = (curInd - 1)/2;
+     }
+   }
+ }//O(log n)
 
 
   /**
    * removeMin()  ---  means of removing an element from heap
    * Removes and returns least element in heap.
    * Postcondition: Tree maintains heap property.
-   * ALGO:
+   * ALGO: 1. While node has children, swap node and least child. Go to just swapped node. 2. repeat. 3. Cut tail.
    * <your clear && concise procedure here>
    */
   public Integer removeMin()
   {
-  }//O(?)
+    if(_heap.size() < 1){
+      throw new IndexOutOfBoundsException("Heap is empty");
+    }
+    int curChild = 0;
+    int remVal = _heap.get(0);
+    while(minChildPos(curChild)!=-1){
+      swap(curChild, minChildPos(curChild));
+      curChild = minChildPos(curChild);
+    }
+    _heap.remove(curChild);
+    return remVal;
+  }//O(log n)
 
 
   /**
@@ -93,7 +125,16 @@ public class ALHeap
    */
   private int minChildPos( int pos )
   {
-  }//O(?)
+    if(2*pos+1<_heap.size()){
+      return minOf(2*pos+1, 2*pos+2);
+    }
+    else if(2*pos+2<_heap.size()){
+      return 2*pos+2;
+    }
+    else{
+      return -1;
+    }
+  }//O(1)
 
 
   //~~~~~~~~~~~~~ aux helper fxns ~~~~~~~~~~~~~~
@@ -108,7 +149,7 @@ public class ALHeap
   //swap for an ArrayList
   private void swap( int pos1, int pos2 )
   {
-    _heap.set( pos1, _heap.set( pos2, _heap.get(pos1) ) );	
+    _heap.set( pos1, _heap.set( pos2, _heap.get(pos1) ) );
   }
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -117,7 +158,6 @@ public class ALHeap
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ALHeap pile = new ALHeap();
 
       pile.add(2);
@@ -163,6 +203,7 @@ public class ALHeap
       System.out.println(pile);
       System.out.println("removing " + pile.removeMin() + "...");
       System.out.println(pile);
+      /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
